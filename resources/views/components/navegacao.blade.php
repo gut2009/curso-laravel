@@ -10,19 +10,19 @@
       <li class="nav-item">
         <a class="nav-link" href="#">
           <span data-feather="file" class="align-text-bottom"></span>
-          Vendas
+          Venda
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('produto.index') }}">
+          <span data-feather="file" class="align-text-bottom"></span>
+          Produto
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
           <span data-feather="file" class="align-text-bottom"></span>
-          Produtos
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="file" class="align-text-bottom"></span>
-          Clientes
+          Cliente
         </a>
       </li>
     </ul>
