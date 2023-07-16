@@ -23,6 +23,7 @@
     <link rel="manifest" href="{{ asset('icones/manifest.json') }}">
     <link rel="mask-icon" href="{{ asset('icones/safari-pinned-tab.svg') }}" color="#712cf9">
     <link rel="icon" href="{{ asset('icones/favicon.ico') }}">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
     <meta name="theme-color" content="#712cf9">
 
     <style>
@@ -142,6 +143,8 @@
 
     <script src="/js/projeto.js"></script>
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+    {!! Toastr::message() !!}
 
 </body>
 </html>
