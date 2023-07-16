@@ -7,9 +7,27 @@ use App\Models\Produto;
 
 class ProdutosController extends Controller
 {
-    public function index() {
+    public function __construct(Produto $produto)
+    {
+        $this->produto = $produto;
+    }
 
-        $findProduto = Produto::all();
+    public function index(Request $request)
+    {
+
+        $pesquisar = $request->pesquisar;
+        
+        $findProduto = $this->produto->getProdutosPesquisarIndex(search: $pesquisar ?? '');
+      
+        return view('pages.produtos.paginacao', compact('findProduto'));
+    }
+
+    public function delete(Request $request)
+    {
+
+        $pesquisar = $request->pesquisar;
+        
+        $findProduto = $this->produto->getProdutosPesquisarIndex(search: $pesquisar ?? '');
       
         return view('pages.produtos.paginacao', compact('findProduto'));
     }
