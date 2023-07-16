@@ -1,6 +1,4 @@
 function deleteRegistroPaginacao(rotaURL, idDoRegistro) {
-  alert(rotaURL);
-    alert(idDoRegistro);
     if (confirm('Deseja confirmar a exclusão?')) {
       $.ajax({
           url: rotaURL,
@@ -28,3 +26,5 @@ function deleteRegistroPaginacao(rotaURL, idDoRegistro) {
     });
   }
 }
+
+$('#mascara_valor').mask('#.##0,00', { reverse: true})
