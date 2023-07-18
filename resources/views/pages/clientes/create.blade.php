@@ -23,32 +23,47 @@
   </div>
   <div class="mb-3">
     <label class="form-label">Endereço</label>
-    <input type="text" value="{{ old('endereco')}}" class="form-control @error('endereco') is-invalid @enderror" name="endereco">
+    <input id="endereco" type="text" value="{{ old('endereco')}}" class="form-control @error('endereco') is-invalid @enderror" name="endereco">
     @if ($errors->has('endereco'))
     <div class="invalid-feedback"> {{ $errors->first('endereco')}}</div>
     @endif
   </div>
   <div class="mb-3">
-    <label class="form-label">Logradouro</label>
-    <input type="text" value="{{ old('logradouro')}}" class="form-control @error('logradouro') is-invalid @enderror" name="logradouro">
-    @if ($errors->has('logradouro'))
-    <div class="invalid-feedback"> {{ $errors->first('logradouro')}}</div>
-    @endif
-  </div>
-  <div class="mb-3">
-    <label class="form-label">CEP</label>
-    <input type="text" value="{{ old('cep')}}" class="form-control @error('cep') is-invalid @enderror" name="cep">
-    @if ($errors->has('cep'))
-    <div class="invalid-feedback"> {{ $errors->first('cep')}}</div>
+    <label class="form-label">Complemento</label>
+    <input id="complemento" type="text" value="{{ old('complemento')}}" class="form-control @error('complemento') is-invalid @enderror" name="complemento">
+    @if ($errors->has('complemento'))
+    <div class="invalid-feedback"> {{ $errors->first('complemento')}}</div>
     @endif
   </div>
   <div class="mb-3">
     <label class="form-label">Bairro</label>
-    <input type="text" value="{{ old('bairro')}}" class="form-control @error('bairro') is-invalid @enderror" name="bairro">
+    <input id="bairro" type="text" value="{{ old('bairro')}}" class="form-control @error('bairro') is-invalid @enderror" name="bairro">
     @if ($errors->has('bairro'))
     <div class="invalid-feedback"> {{ $errors->first('bairro')}}</div>
     @endif
   </div>
+  <div class="mb-3">
+    <label class="form-label">Cidade</label>
+    <input id="cidade" type="text" value="{{ old('cidade')}}" class="form-control @error('cidade') is-invalid @enderror" name="cidade">
+    @if ($errors->has('cidade'))
+    <div class="invalid-feedback"> {{ $errors->first('cidade')}}</div>
+    @endif
+  </div>
+  <div class="mb-3">
+    <label class="form-label">UF</label>
+    <input id="uf" type="text" value="{{ old('uf')}}" class="form-control @error('uf') is-invalid @enderror" name="uf">
+    @if ($errors->has('uf'))
+    <div class="invalid-feedback"> {{ $errors->first('uf')}}</div>
+    @endif
+  </div>
+  <div class="mb-3">
+    <label class="form-label">CEP</label>
+    <input id="cep" type="text" value="{{ old('cep')}}" class="form-control @error('cep') is-invalid @enderror" name="cep">
+    @if ($errors->has('cep'))
+    <div class="invalid-feedback"> {{ $errors->first('cep')}}</div>
+    @endif
+  </div>
+
 
 
   <button type="submit" class="btn btn-success">Cadastrar</button>

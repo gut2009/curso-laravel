@@ -19,7 +19,8 @@
             <tr>
               <th>Cod</th>
               <th>Nome</th>
-              <th>Logradouro</th>
+              <th>Cidade</th>
+              <th>UF</th>
               <th>Criação</th>
               <th>Ações</th>
             </tr>
@@ -30,7 +31,8 @@
             <tr>
               <td>{{ $cliente->id }}</td>
               <td>{{ $cliente->nome }}</td>
-              <td>{{ $cliente->logradouro }}</td>
+              <td>{{ $cliente->cidade }}</td>
+              <td>{{ $cliente->uf }}</td>
               <td>{{  date_format($cliente->created_at, "d/m/Y") }}</td>
               <td>
                 <a href="{{ route('atualizar.cliente', $cliente->id) }}" class="btn btn-warning btn-sm">Editar</a>

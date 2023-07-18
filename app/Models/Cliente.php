@@ -13,9 +13,11 @@ class Cliente extends Model
         'nome',
         'email',
         'endereco',
-        'logradouro',
-        'cep',
+        'complemento',
         'bairro',
+        'cidade',
+        'uf',
+        'cep',
     ];
 
     public function getClientesPesquisarIndex (string $search = '') {

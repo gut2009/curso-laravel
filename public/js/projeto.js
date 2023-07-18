@@ -35,14 +35,21 @@ $("#cep").blur(function () {
     if (cep != "") {
         var validacep = /^[0-9]{8}$/;
         if (validacep.test(cep)) {
-            $("#logradouro").val("");
-            $("#bairro").val(" ");
-            $("#endereco").val(" ");
+            $("#endereco").val(""); //logradouro
+            $("#complemento").val(""); //complemento
+            $("#bairro").val(" "); //bairro
+            $("#cidade").val(" "); //localidade
+            $("#uf").val(" "); //uf
+            $("#cep").val(" "); //cep
+            
             $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
                 if (!("erro" in dados)) {
-                    $("#logradouro").val(dados.logradouro.toUpperCase());
+                    $("#endereco").val(dados.logradouro.toUpperCase());
+                    $("#complemento").val(dados.complemento.toUpperCase());
                     $("#bairro").val(dados.bairro.toUpperCase());
-                    $("#endereco").val(dados.localidade.toUpperCase());
+                    $("#cidade").val(dados.localidade.toUpperCase());
+                    $("#uf").val(dados.uf.toUpperCase());
+                    $("#cep").val(dados.cep.toUpperCase());
                 }
                 else {
                     alert("CEP não encontrado de forma automatizado digite manualmente ou tente novamente.");
