@@ -27,4 +27,64 @@ function deleteRegistroPaginacao(rotaURL, idDoRegistro) {
   }
 }
 
-$('#mascara_valor').mask('#.##0,00', { reverse: true})
+$('#mascara_valor').mask('#.##0,00', { reverse: true });
+
+
+$("#cep").blur(function () {
+    var cep = $(this).val().replace(/\D/g, '');
+    if (cep != "") {
+        var validacep = /^[0-9]{8}$/;
+        if (validacep.test(cep)) {
+            $("#logradouro").val("");
+            $("#bairro").val(" ");
+            $("#endereco").val(" ");
+            $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+                if (!("erro" in dados)) {
+                    $("#logradouro").val(dados.logradouro.toUpperCase());
+                    $("#bairro").val(dados.bairro.toUpperCase());
+                    $("#endereco").val(dados.localidade.toUpperCase());
+                }
+                else {
+                    alert("CEP não encontrado de forma automatizado digite manualmente ou tente novamente.");
+                }
+            });
+        }
+    }
+});
+
+/*
+
+function mask($val, $mask)
+{
+    $maskared = '';
+    $k = 0;
+    for ($i = 0; $i <= strlen($mask) - 1; ++$i) {
+        if ($mask[$i] == '#') {
+            if (isset($val[$k])) {
+                $maskared .= $val[$k++];
+            }
+        } else {
+            if (isset($mask[$i])) {
+                $maskared .= $mask[$i];
+            }
+        }
+    }
+
+    return $maskared;
+}
+*/
+
+/*
+EXEMPLO DE USO
+mask($cnpj, '##.###.###/####-##');
+
+echo mask($cnpj, '##.###.###/####-##').'<br>';
+echo mask($cpf, '###.###.###-##').'<br>';
+echo mask($cep, '#####-###').'<br>';
+echo mask($data, '##/##/####').'<br>';
+echo mask($data, '##/##/####').'<br>';
+echo mask($data, '[##][##][####]').'<br>';
+echo mask($data, '(##)(##)(####)').'<br>';
+echo mask($hora, 'Agora são ## horas ## minutos e ## segundos').'<br>';
+echo mask($hora, '##:##:##');
+*/

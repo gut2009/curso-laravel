@@ -25,6 +25,14 @@ class ProdutosController extends Controller
         return view('pages.produtos.paginacao', compact('findProduto'));
     }
 
+    public function visualizarProduto(Request $request, $id)
+    {
+        $findProduto = Produto::where('id', $id)->first();
+  
+        return view('pages.produtos.visualizar', ['findProduto' => $findProduto]);
+    }
+
+
     public function delete(Request $request)
     {
         $id = $request->id;
