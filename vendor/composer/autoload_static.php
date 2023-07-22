@@ -537,6 +537,7 @@ class ComposerStaticInit56d605ce60a6fa57e0a84ac0274f88e5
         'App\\Http\\Requests\\FormRequestCliente' => __DIR__ . '/../..' . '/app/Http/Requests/FormRequestCliente.php',
         'App\\Http\\Requests\\FormRequestProduto' => __DIR__ . '/../..' . '/app/Http/Requests/FormRequestProduto.php',
         'App\\Http\\Requests\\FormRequestVenda' => __DIR__ . '/../..' . '/app/Http/Requests/FormRequestVenda.php',
+        'App\\Mail\\ComprovanteDeVendaEmail' => __DIR__ . '/../..' . '/app/Mail/ComprovanteDeVendaEmail.php',
         'App\\Models\\Cliente' => __DIR__ . '/../..' . '/app/Models/Cliente.php',
         'App\\Models\\Componentes' => __DIR__ . '/../..' . '/app/Models/Componentes.php',
         'App\\Models\\Produto' => __DIR__ . '/../..' . '/app/Models/Produto.php',

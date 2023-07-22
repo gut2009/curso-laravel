@@ -25,6 +25,7 @@ return array(
     'App\\Http\\Requests\\FormRequestCliente' => $baseDir . '/app/Http/Requests/FormRequestCliente.php',
     'App\\Http\\Requests\\FormRequestProduto' => $baseDir . '/app/Http/Requests/FormRequestProduto.php',
     'App\\Http\\Requests\\FormRequestVenda' => $baseDir . '/app/Http/Requests/FormRequestVenda.php',
+    'App\\Mail\\ComprovanteDeVendaEmail' => $baseDir . '/app/Mail/ComprovanteDeVendaEmail.php',
     'App\\Models\\Cliente' => $baseDir . '/app/Models/Cliente.php',
     'App\\Models\\Componentes' => $baseDir . '/app/Models/Componentes.php',
     'App\\Models\\Produto' => $baseDir . '/app/Models/Produto.php',

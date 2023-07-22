@@ -57,4 +57,5 @@ Route::prefix('vendas')->group(function () {
     Route::put('/atualizarVenda/{id}', [VendasController::class, 'atualizarVenda'])->name('atualizar.venda');
     // Visualizar --> Show
     Route::get('/visualizarVenda/{id}', [VendasController::class, 'visualizarVenda'])->name('visualizar.venda');
+    Route::get('/enviaComprovantePorEmail/{id}', [VendasController::class, 'enviaComprovantePorEmail'])->name('enviaComprovantePorEmail.venda');
 });

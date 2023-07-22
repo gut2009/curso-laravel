@@ -42,7 +42,7 @@
               <td>
                 <a href="{{ route('atualizar.venda', $venda->id) }}" class="btn btn-warning btn-sm">Editar</a>
                 <a href="{{ route('visualizar.venda', $venda->id) }}" class="btn btn-primary btn-sm">Visualizar</a>
-                <a href="" class="btn btn-secondary btn-sm">Enviar Email</a>
+                <a href="{{ route('enviaComprovantePorEmail.venda', $venda->id)}}" class="btn btn-secondary btn-sm">Enviar Email</a>
 
               </td>
             </tr>
