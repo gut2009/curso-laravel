@@ -31,4 +31,9 @@ class Cliente extends Model
 
         return $cliente;
     }
+    public function vendas()
+    {
+        //UM Cliente POSSUI MUITAS vendas
+        return $this->hasMany('App\Models\Venda');
+    }
 }

@@ -5,7 +5,7 @@
 <div class='container mt-3 border'>
   <div class="row bg-success-subtle text-center "><h3>Cliente: {{ $findCliente->nome}}</h3></div>
 </div>
-<div class='container mt-2 border'>
+<div class='container mt-2 border' style="background-color: antiquewhite">
   <form>
     <div class="row">  
       <div class="col-2 mb-1">
@@ -27,17 +27,24 @@
         <input type="text" class="form-control" id="InputEnd" value="{{ $findCliente->endereco}}">
       </div>
       <div class="col-6 mb-1">
+        <label for="InputCompl" class="form-label">Complemento</label>
+        <input type="text" class="form-control" id="InputCompl" value="{{ $findCliente->complemento}}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 mb-1">
         <label for="InputBairro" class="form-label">Bairro</label>
         <input type="text" class="form-control" id="InputBairro" value="{{ $findCliente->bairro}}">
       </div>
-    </div>
-
-    <div class="row">  
-      <div class="col-6 mb-1">
-        <label for="InputCidade" class="form-label">Cidade UF</label>
-        <input type="text" class="form-control" id="InputCidade" value="{{ $findCliente->logradouro}}">
+      <div class="col-5 mb-1">
+        <label for="InputCidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" id="InputCidade" value="{{ $findCliente->cidade}}">
       </div>
-      <div class="col-6 mb-1">
+      <div class="col-1 mb-1">
+        <label for="InputUF" class="form-label">CEP</label>
+        <input type="text" class="form-control" id="InputUF" value="{{ $findCliente->uf}}">
+      </div>
+      <div class="col-2 mb-1">
         <label for="InputCEP" class="form-label">CEP</label>
         <input type="text" class="form-control" id="InputCEP" value="{{ $findCliente->cep}}">
       </div>
@@ -45,11 +52,11 @@
     <div class="row">  
       <div class="col-6 mb-1">
         <label for="InputDC" class="form-label">Data do registro</label>
-        <input type="text" class="form-control" id="InputDC" value="{{ $findCliente->created_at}}">
+        <input type="text" class="form-control" id="InputDC" value="{{ date_format($findCliente->created_at, "d/m/Y") }}">
       </div>
       <div class="col-6 mb-1">
         <label for="InputDA" class="form-label">Data da atualização</label>
-        <input type="text" class="form-control" id="InputDA" value="{{ $findCliente->updated_at}}">
+        <input type="text" class="form-control" id="InputDA" value="{{ date_format($findCliente->updated_at, "d/m/Y") }}">
       </div>
     </div>
 

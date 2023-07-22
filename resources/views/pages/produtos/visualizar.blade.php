@@ -4,7 +4,7 @@
 
 
 <div class='container mt-3 border'>
-  <div class="row bg-success-subtle text-center "><h3>Produto: {{ $findProduto->nome}}</h3></div>
+  <div class="row bg-success-subtle text-center "><h3>Produto: {{ $findProduto->id}} / {{ $findProduto->nome}}</h3></div>
 </div>
   
 <div class='container mt-2 border'>
@@ -21,17 +21,17 @@
       </div>
       <div class="col-5 mb-1">
         <label for="InputValor" class="form-label">Valor</label>
-        <input id="mascara_valor" type="number" class="form-control" value="{{ $findProduto->valor}}">
+        <input type="number" class="form-control" value="{{ $findProduto->valor}}">
       </div>
     </div>
     <div class="row">  
       <div class="col-6 mb-1">
         <label for="InputDC" class="form-label">Data do registro</label>
-        <input type="text" class="form-control" id="InputDC" value="{{ $findProduto->created_at}}">
+        <input type="text" class="form-control" id="InputDC" value="{{ date_format($findProduto->created_at, "d/m/Y") }}">
       </div>
       <div class="col-6 mb-1">
         <label for="InputDA" class="form-label">Data da atualização</label>
-        <input type="text" class="form-control" id="InputDA" value="{{ $findProduto->updated_at}}">
+        <input type="text" class="form-control" id="InputDA" value="{{ date_format($findProduto->updated_at, "d/m/Y") }}">
       </div>
     </div>
     <div class="row">  

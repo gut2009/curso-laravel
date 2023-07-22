@@ -25,5 +25,6 @@
         </div>
 
         <button type="submit" class="btn btn-success">Gravar</button>
+        <button type="submit" href="{{ route('produto.index') }}" class="btn btn-primary">Voltar</button>
     </form>
 @endsection

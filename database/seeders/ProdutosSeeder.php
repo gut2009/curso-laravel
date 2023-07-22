@@ -13,6 +13,8 @@ class ProdutosSeeder extends Seeder
      */
     public function run(): void
     {
+        
+        /*
         Produto::create(
             [
                 'nome' => 'Amarildo Sampaio',
@@ -20,5 +22,6 @@ class ProdutosSeeder extends Seeder
             ],
             
         );
+        */
     }
 }

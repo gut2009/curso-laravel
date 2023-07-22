@@ -25,4 +25,10 @@ class Produto extends Model
 
         return $produto;
     }
+
+    public function vendas()
+    {
+        //UM Produto POSSUI MUITAS vendas
+        return $this->hasMany('App\Models\Venda');
+    }
 }

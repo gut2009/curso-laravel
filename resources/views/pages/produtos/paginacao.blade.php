@@ -21,6 +21,7 @@
               <th>Nome</th>
               <th>Valor</th>
               <th>Criação</th>
+              <th>Atualização</th>
               <th>Ações</th>
             </tr>
           </thead>
@@ -32,6 +33,7 @@
               <td>{{ $produto->nome }}</td>
               <td>{{ 'R$' . ' ' . number_format($produto->valor, 2, ',', '.') }}</td>
               <td>{{  date_format($produto->created_at, "d/m/Y") }}</td>
+              <td>{{  date_format($produto->updated_at, "d/m/Y") }}</td>
               <td>
                 <a href="{{ route('atualizar.produto', $produto->id) }}" class="btn btn-warning btn-sm">Editar</a>
 
