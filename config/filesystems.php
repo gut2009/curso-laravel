@@ -55,6 +55,10 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        // 'imagens_leitor' => [
+        //     'driver' => 'local',
+        //     'root' => public_path('imagens/leitores')
+        // ],
 
     ],
 
@@ -71,6 +75,9 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        // public_path('images') => storage_path('app/images'),
+        // public_path('textos') => storage_path('app/textos'), //Ver Laravel - Armazenamento 
+        
     ],
 
 ];

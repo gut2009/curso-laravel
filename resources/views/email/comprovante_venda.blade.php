@@ -1,7 +1,3 @@
-<h1>Comprovante de Venda</h1>
-<p>Nome do produto:{{ $mailData['produtoNome'] }}</p>
-<p>Nome do Cliente {{ $mailData['clienteNome'] }}</p>
-
 <!doctype html>
 <html>
 <head>
@@ -174,7 +170,7 @@
                                                 Este é um modelo de e-mail realmente simples.<br>Seu único objetivo é obter o destinatário clique no botão sem distrações.</p>
                                             <p
                                                 style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">
-                                                Good luck! Hope it works.</p>
+                                                Boa sorte! Espero que funcione.</p>
                                         </td>
                                     </tr>
                                 </table>
@@ -197,8 +193,8 @@
                                     <span class="apple-link"
                                         style="color: #999999; font-size: 12px; text-align: center;">Company Inc, 3
                                         Abbey Road, San Francisco CA 94102</span>
-                                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif"
-                                        style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>.
+                                    <br> Don't like these emails? <a href="https://www.estudosgutierrez.com.br"
+                                        style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Cancelar inscrição</a>.
                                 </td>
                             </tr>
                             <tr>

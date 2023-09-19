@@ -27,8 +27,20 @@ function deleteRegistroPaginacao(rotaURL, idDoRegistro) {
   }
 }
 
-$('#mascara_valor').mask('#.##0,00', { reverse: true });
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
 
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
 
 $("#cep").blur(function () {
     var cep = $(this).val().replace(/\D/g, '');
@@ -58,6 +70,41 @@ $("#cep").blur(function () {
         }
     }
 });
+
+// function excluirQualquer() {
+
+// if(confirm('Deseja excluir o registro???'))
+
+//     $('.excluir-qualquer').click(function() {
+//     var idQualquer = $(this).data('id');
+    
+//     // Altera o conteúdo e o ID do modal de acordo com o item selecionado
+//     $('#modal-excluir-qualquer .modal-body').html('Tem certeza que deseja excluir o item ' + idQualquer + '?');
+//     $('#modal-excluir-qualquer').attr('data-id', idQualquer);
+    
+//     // Abre o modal
+//     $('#modal-excluir-qualquer').modal('show');
+//   });
+  
+//   $('#modal-excluir-qualquer .btn-confirmar').click(function() {
+//     var idQualquer = $('#modal-excluir-qualquer').attr('data-id');
+    
+//     // Fecha o modal
+//     $('#modal-excluir-qualquer').modal('hide');
+    
+//     // Remove o código do modal da página
+//     $('#modal-excluir-qualquer').remove();
+    
+//     // Exibe a mensagem de sucesso ou erro
+//     // ...
+//   });
+
+// }
+
+/*  VER app\Models\Componentes.php --> outra forma
+    Esta abaixo não funcionou. Na paginação inclui ponto indevidamente
+// $('#mascara_valor').mask('#.##0,00', { reverse: true });
+*/
 
 /*
 

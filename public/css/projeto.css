@@ -1,0 +1,299 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  /* -webkit-overflow-scrolling: touch; */
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.th2 {
+  color: white;
+}
+
+.fundo {
+ border-radius: 15px;
+ background-color: #ebfeff
+}
+
+.btnPages {
+  border-radius: 25px;
+  background-color: #4eb6ed;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btnLogo {
+  border-radius: 25px;
+  border-color: #1a77aa;
+  background-color: #ebfeff
+}
+
+.btnPages:hover {
+  color: #fff;
+  background-color: #2f9de7;
+  border-color: #2f9de7
+}
+
+#tolltipBtn {
+  display: none;
+}
+
+#passarMouse:hover #tolltipBtn{
+  display:block;
+  }
+
+.navCores {
+  background-color: #2f9de7;
+}
+
+.form-control {
+  max-height: 30px;
+}
+
+.textarea {
+  max-height: 250px;
+}
+
+label {
+  color:#2f9de7;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.delete-form .btn-danger {
+  display: none;
+}
+
+.btn-botao {
+  border-radius: 15px;
+  background-color:#2f9de7;
+  color:#fff;
+  border-color:  #2f9de7;
+}
+  
+.btn-botao:hover {
+  background-color: darkgreen;
+  /* text-decoration-color: white; */
+  color: #fff !important;
+}
+
+.imagem {
+  width: 100px;
+  height: 100px
+}
+
+.navTop {
+  background-color: #2f9de7;
+  border-radius: 25px;
+  color: #fff;
+}
+
+.link {
+  background-color: #2f9de7;
+}
+.rodape {
+  background-color: #2f9de7;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.titulo {
+  background-color: #2f9de7;
+  color:#fff;
+  text-align: justify;
+  margin-left: 30px;
+}
+
+.subTitulo {
+  color:#fff;
+  text-align: justify;
+  margin-left: 30px;
+}
+  
+.modFundo {
+  border-radius: 15px;
+  background-color: #8ce7f9"
+ }
+
+/* Navegação */
+
+.sidebar li .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.dropdown-btn {
+  text-decoration: none;
+}
+
+.dropdown-btn:hover {
+  color: #1b7436;
+}
+
+.nav-link:hover {
+  color: #1b7436;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: none;
+  padding-left: 6px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: none;
+  color: #041261;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* CSS DO DASHBOARD Original */
+
+.bi {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+/*
+ * Sidebar
+ */
+
+@media (min-width: 768px) {
+  .sidebar .offcanvas-lg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 48px;
+  }
+  .navbar-search {
+    display: block;
+  }
+}
+
+.sidebar .nav-link {
+  font-size: .875rem;
+  font-weight: 650;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+.total {
+  width: 80px;
+  height: 40px;
+  background-color: #2f9de7;
+  color: #fff;
+}
+
+.total:hover {
+  background-color: #1b7436;
+  color: #fff;
+}
+
+.imagem {
+  width: 120px;
+  height: 120px;
+}
+
+.elementoLogin {
+	/* position: fixed; */
+  z-index: 100;
+ }
+ 
+.elementoDash {
+	position: relative;
+  z-index: 1;
+ }
